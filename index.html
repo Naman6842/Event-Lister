@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="calendar">
+  <div id="calendar-header">Event Calendar</div>
+  <div id="event-form">
+    <label for="event-name">Event Name:</label>
+    <input type="text" id="event-name" required>
+
+    <label for="start-date">Start Date:</label>
+    <input type="datetime-local" id="start-date" required>
+
+    <label for="end-date">End Date:</label>
+    <input type="datetime-local" id="end-date" required>
+
+    <label for="time-zone">Time Zone:</label>
+    <input type="text" id="time-zone" required>
+
+    <div id="theme-selector">
+      <span>Themes:</span>
+      <div class="theme-option theme1" onclick="changeTheme('theme1')"></div>
+      <div class="theme-option theme2" onclick="changeTheme('theme2')"></div>
+      <div class="theme-option theme3" onclick="changeTheme('theme3')"></div>
+    </div>
+
+    <button onclick="addEvent()">Add Event</button>
+  </div>
+  <a href="event_list.html">Go to Event List</a>
+</div>
+
+<div id="listed-events-container">
+  <div id="listed-events-header">Listed Events</div>
+  <ul id="listed-events"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
